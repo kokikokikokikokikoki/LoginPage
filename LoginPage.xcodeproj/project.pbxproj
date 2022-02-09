@@ -16,7 +16,7 @@
 		2030454427A9303E0080C07B /* LoginPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030454327A9303E0080C07B /* LoginPageTests.swift */; };
 		2030454E27A9303E0080C07B /* LoginPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030454D27A9303E0080C07B /* LoginPageUITests.swift */; };
 		2030455027A9303E0080C07B /* LoginPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030454F27A9303E0080C07B /* LoginPageUITestsLaunchTests.swift */; };
-		2030455D27ABEC7B0080C07B /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030455C27ABEC7A0080C07B /* signUpViewController.swift */; };
+		2030455D27ABEC7B0080C07B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */; };
 		2030455F27AC101D0080C07B /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030455E27AC101D0080C07B /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,7 @@
 		2030454927A9303E0080C07B /* LoginPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2030454D27A9303E0080C07B /* LoginPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITests.swift; sourceTree = "<group>"; };
 		2030454F27A9303E0080C07B /* LoginPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2030455C27ABEC7A0080C07B /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2030455E27AC101D0080C07B /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 				2030453527A9303D0080C07B /* Assets.xcassets */,
 				2030453727A9303D0080C07B /* LaunchScreen.storyboard */,
 				2030453A27A9303D0080C07B /* Info.plist */,
-				2030455C27ABEC7A0080C07B /* signUpViewController.swift */,
+				2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */,
 				2030455E27AC101D0080C07B /* loginViewController.swift */,
 			);
 			path = LoginPage;
@@ -266,7 +266,7 @@
 			files = (
 				2030453127A9303A0080C07B /* ViewController.swift in Sources */,
 				2030452D27A9303A0080C07B /* AppDelegate.swift in Sources */,
-				2030455D27ABEC7B0080C07B /* signUpViewController.swift in Sources */,
+				2030455D27ABEC7B0080C07B /* WelcomeViewController.swift in Sources */,
 				2030452F27A9303A0080C07B /* SceneDelegate.swift in Sources */,
 				2030455F27AC101D0080C07B /* loginViewController.swift in Sources */,
 			);

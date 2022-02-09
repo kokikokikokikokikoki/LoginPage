@@ -7,15 +7,20 @@
 
 import UIKit
 
-class signUpViewController: UIViewController {
-
+class WelcomeViewController: UIViewController {
+    @IBOutlet weak var backButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onClickBack(_ sender: Any) {
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

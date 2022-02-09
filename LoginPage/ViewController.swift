@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     @IBOutlet weak var labelMessage: UILabel!
-    
     @IBOutlet weak var passwordError: UILabel!
+    var isAlreadyClickLogin: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,6 @@ class ViewController: UIViewController {
     func resetForm() {
         labelMessage.isHidden = true
         passwordError.isHidden = true
-        labelMessage.text = "Required"
-        userEmail.text = ""
     }
 
     func isValidEmail(email: String) -> Bool {
@@ -38,61 +36,73 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginTap(_ sender: Any) {
-        if userEmail.text?.isEmpty ?? false {
-            labelMessage.text = "Required"
-            labelMessage.isHidden = false
+        isAlreadyClickLogin = true
+        
+        let email = validateEmail(message: userEmail.text ?? "")
+        let password = validatePassword(message: passwordText.text ?? "")
+        if email.0 == false || password.0 == false {
+            manageErrorMessage(label: labelMessage, message: email.1, isHidden: email.0)
+            manageErrorMessage(label: passwordError, message: password.1, isHidden: password.0)
             return
         }
-        else if !isValidEmail(email: userEmail.text ?? "") {
-            labelMessage.text = "Invalid email"
-            labelMessage.isHidden = false
-            return
-        }
+        
         labelMessage.isHidden = true
+        passwordError.isHidden = true
         redirectToWelcomeScreen()
     }
 
     private func redirectToWelcomeScreen() {
-        print("redirectToWelcomeScreen")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let welcomeScreen = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+//        self.navigationController?.pushViewController(welcomeScreen, animated: true)
+//        welcomeScreen.modalPresentationStyle = .fullScreen
+        self.present(welcomeScreen, animated: true, completion: nil)
+        
     }
 
-    private func validateUsername() {
-        if userEmail.text?.isEmpty ?? false {
-            labelMessage.text = "Required"
-            labelMessage.isHidden = false
+    private func validateEmail(message: String) -> (Bool, String) {
+        if message.isEmpty {
+            return (false, "Required")
         }
-        else if !isValidEmail(email: userEmail.text ?? "") {
-            labelMessage.text = "Invalid email"
-            labelMessage.isHidden = false
-        } else {
-            labelMessage.isHidden = true
+        if !isValidEmail(email: message) {
+            return (false, "Invalid email")
         }
+        
+        return (true, "Correct")
     }
-
-    private func validatePassword() {
-        if passwordText.text?.isEmpty ?? false {
-            passwordError.text = "Required"
-            passwordError.isHidden = false
+    
+    private func validatePassword(message: String) -> (Bool, String) {
+        if message.isEmpty {
+            return (false, "Required")
         }
-        else if passwordText.text?.count ?? 0 < 6 {
-            passwordError.text = "Required more than 6 charactor"
-            passwordError.isHidden = false
-        } else {
-            passwordError.isHidden = true
+        if message.count < 6 {
+            return (false, "Password should more than 6 charactor")
         }
+        
+        return (true, "Correct")
+    }
+    
+    private func manageErrorMessage() {
+        let email = validateEmail(message: userEmail.text ?? "")
+        let password = validatePassword(message: passwordText.text ?? "")
+        manageErrorMessage(label: labelMessage, message: email.1, isHidden: email.0)
+        manageErrorMessage(label: passwordError, message: password.1, isHidden: password.0)
+    }
+    
+    private func manageErrorMessage(label: UILabel, message: String, isHidden: Bool) {
+        label.text = message
+        label.isHidden = isHidden
     }
 }
 
 extension ViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        validateUsername()
-        validatePassword()
+        if isAlreadyClickLogin {
+            manageErrorMessage()
+        }
         return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
     }
 }
-
-
-
