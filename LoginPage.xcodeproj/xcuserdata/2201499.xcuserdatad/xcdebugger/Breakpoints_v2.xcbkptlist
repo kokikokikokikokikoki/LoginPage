@@ -14,9 +14,9 @@
             filePath = "LoginPage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "checkValidForm()"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "validatePassword(message:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "LoginPage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "passwordChanged(_:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "validateEmail(message:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

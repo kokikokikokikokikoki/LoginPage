@@ -22,8 +22,22 @@ class ViewController: UIViewController {
         userEmail.delegate = self
         passwordText.delegate = self
         resetForm()
+        initializeHideKeyboard()
+    
     }
 
+    func initializeHideKeyboard(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self, action: #selector(dismissMyKeyboard)
+        )
+        view.addGestureRecognizer(tap)
+    }
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
+    }
+    
+    
+    
     func resetForm() {
         labelMessage.isHidden = true
         passwordError.isHidden = true
