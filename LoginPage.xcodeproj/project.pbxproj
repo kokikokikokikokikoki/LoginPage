@@ -18,6 +18,7 @@
 		2030455027A9303E0080C07B /* LoginPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030454F27A9303E0080C07B /* LoginPageUITestsLaunchTests.swift */; };
 		2030455D27ABEC7B0080C07B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */; };
 		2030455F27AC101D0080C07B /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030455E27AC101D0080C07B /* loginViewController.swift */; };
+		203BC16827B990B200CBA687 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203BC16727B990B200CBA687 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2030454F27A9303E0080C07B /* LoginPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2030455E27AC101D0080C07B /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		203BC16727B990B200CBA687 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				2030453A27A9303D0080C07B /* Info.plist */,
 				2030455C27ABEC7A0080C07B /* WelcomeViewController.swift */,
 				2030455E27AC101D0080C07B /* loginViewController.swift */,
+				203BC16727B990B200CBA687 /* TableViewCell.swift */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				2030453127A9303A0080C07B /* ViewController.swift in Sources */,
 				2030452D27A9303A0080C07B /* AppDelegate.swift in Sources */,
 				2030455D27ABEC7B0080C07B /* WelcomeViewController.swift in Sources */,
+				203BC16827B990B200CBA687 /* TableViewCell.swift in Sources */,
 				2030452F27A9303A0080C07B /* SceneDelegate.swift in Sources */,
 				2030455F27AC101D0080C07B /* loginViewController.swift in Sources */,
 			);

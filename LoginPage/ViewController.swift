@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelMessage: UILabel!
     @IBOutlet weak var passwordError: UILabel!
+    
     var isAlreadyClickLogin: Bool = false
     
     override func viewDidLoad() {
